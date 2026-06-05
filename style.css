@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'MonoLisa';
     src: url('font/MonoLisaweiiiiiuNormal.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MonoLisa';
     src: url('font/MonoLisaweiiiiiuItalic.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 100 900;
     font-style: italic;
 }
 
@@ -297,7 +297,19 @@ main h2:first-of-type {
     padding: 0;
 }
 
-.awards-list li,
+.awards-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.awards-list .award-name {
+    flex: 1;
+}
+
 .skills-list li {
     position: relative;
     padding-right: 120px;
@@ -306,11 +318,10 @@ main h2:first-of-type {
 }
 
 .awards-list .date {
-    position: absolute;
-    right: 0;
-    top: 0;
     font-size: 1.05rem;
     color: #777;
+    white-space: nowrap;
+    text-align: right;
 }
 
 ul {
@@ -357,6 +368,14 @@ ul li {
 
 .conference-tag.hpca {
     background-color: #c96567;
+}
+
+.conference-tag.naacl {
+    background-color: #c96567;
+}
+
+.conference-tag.under-review {
+    background-color: #8a8a8a;
 }
 
 .conference-tag.atc {
@@ -425,6 +444,18 @@ ul li {
 
 .publications-list .paper-link:hover {
     color: var(--link-hover-color);
+}
+
+.visitors-map {
+    max-width: 50%;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.visitors-map img,
+.visitors-map canvas {
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
